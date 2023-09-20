@@ -374,7 +374,7 @@ var _ = Describe("PVCViewer controller", func() {
 			testHelper.CreatePVC(pvcName, corev1.ReadWriteMany)
 			testHelper.CreatePod("rwx-pod", "some-node", pvcName)
 
-			By("Creating a PVCViewer for the RWX PVC ")
+			By("Creating a PVCViewer for the RWX PVC  ")
 			pvcViewer := testHelper.CreateViewer(&kubefloworgv1alpha1.PVCViewerSpec{
 				PVC: pvcName,
 			})
