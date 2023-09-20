@@ -375,7 +375,7 @@ func (r *PVCViewerReconciler) generateAffinity(ctx context.Context, log logr.Log
 	}
 
 	if len(pvc.Spec.AccessModes) != 1 || pvc.Spec.AccessModes[0] != corev1.ReadWriteOnce {
-		log.Info("Omitting Affinity: PVC is not RWO")
+		log.Info("Omitting Affinity: PVC is not RWO ")
 		return nil, nil
 	}
 
